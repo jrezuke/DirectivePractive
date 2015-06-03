@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Egghead Videos</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.4.7/css/foundation.css">
+</head>
+<body>
+
+<div ng-app="phoneApp">
+    <!-- we've replaced the use of $scope with the preferred "controller as" syntax. see:http://toddmotto.com/digging-into-angulars-controller-as-syntax/ -->
+    <div ng-controller="AppCtrl as appctrl">
+        <div phone dial="appctrl.callHome(message)"></div>
+        <div phone dial="appctrl.callHome(message)"></div>
+        <div phone dial="appctrl.callHome(message)"></div>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="app2/directives2.js"></script>
+</body>
+</html>

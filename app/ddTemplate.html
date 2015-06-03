@@ -1,0 +1,21 @@
+<div>
+    <form name="dexForm" class="form-inline" novalidate role="form">
+        <div class="form-group">
+            <lable for="dextoseConcentration">Dextrose %</lable>
+            <select ng-model="vm.selectedDextrose" ng-options="item as item.display for item in vm.dextroses" class="form-control" id="dextoseConcentration" name="dextoseConcentration">
+                <!--<option ng-repeat="item in dextroses" value="item">{{ item.display }}</option>-->
+            </select>
+            <span ng-show="dexForm.dextoseConcentration.$error.required">Dextrose concentration is required!</span>
+        </div>
+        <div class="form-group">
+            <lable for="volume">Volume (mL)</lable>
+            <input ng-model="vm.volume" id="volume" name="volume" class="form-control" style="width: 60px" type="text" ng-required="true">
+            <span ng-show="dexForm.volume.$error.required">Volume is required!</span>
+        </div>
+            <button ng-click="vm.addSelection()"  type="submit" class="btn btn-sm btn-success">
+                <span class="glyphicon glyphicon-plus" title="Add to fluid infusions"></span>
+            </button>
+        <code>{{ vm.selectedDextrose.percent }}</code>
+    </form>
+    <jr-dropdown-results></jr-dropdown-results>
+</div>
