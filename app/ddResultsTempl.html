@@ -1,3 +1,22 @@
-<ul>
-    <li ng-repeat="result in vm.results track by $index">{{result.display}}</li>
-</ul>
+<div>
+    <h3>Added Entries</h3>
+
+    <table class="table1 table-responsive">
+        <tr>
+            <th>Dextrose %</th>
+            <th>Volume</th>
+            <th>Caloric Intake</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="result in vm.results track by $index">
+            <td>{{ result.dextroseConcentration }}</td>
+            <td>{{ result.volume }}</td>
+            <td>{{ result.caloricIntake }}</td>
+            <td> <jr-remove-result test-this="vm.test()" index="{{ $index}}"></jr-remove-result> </td>
+
+        </tr>
+
+    </table>
+    <button ng-click="vm.test()">test</button>
+    {{ vm.selectedDextrose }}
+</div>

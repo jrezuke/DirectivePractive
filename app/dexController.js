@@ -5,21 +5,16 @@
         vm.results =[];
         vm.model = {};
 
-        vm.addResult = function(){
-            //alert('addResult');
-
-        };
-
         var getDextroses = function(){
-
-
             vm.dextroses = dataService.getDextrosePercents();
             vm.dextrose = vm.dextroses[0];
         };
 
+        vm.removeOne = function(item){
+          alert("testThis:" + item.value);
+        };
+
         getDextroses();
-
-
     }
 
     DexController.$inject = ['dataService'];

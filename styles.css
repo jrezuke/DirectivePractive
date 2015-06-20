@@ -13,3 +13,21 @@ input.fluidInfusions{
     display: block;
 }
 
+.helpText{
+    font-family: Consolas;
+    font-style: italic;
+    background-color: #a6e1ec;
+}
+
+.table1{
+    width: 60%;
+}
+
+.table1 th{
+    border-bottom: blue solid;
+    line-height: 2.5em;
+}
+.table1 td{
+    border-bottom: thin blue solid;
+    padding: 10px;
+}
