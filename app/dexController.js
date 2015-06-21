@@ -10,10 +10,6 @@
             vm.dextrose = vm.dextroses[0];
         };
 
-        vm.removeOne = function(item){
-          alert("testThis:" + item.value);
-        };
-
         getDextroses();
     }
 

@@ -1,7 +1,6 @@
 <div>
     <h3>Fluid Infusions</h3>
     <div class="row">
-        <button ng-click="vm.test()">test</button>
         <div class="col-md-5">
             <form name="dexForm" class="form-inline" novalidate role="form">
 
@@ -61,6 +60,6 @@
         </div>
     </div>
     <div class="row">
-        <jr-dropdown-results remove-result="vm.test()" results='vm.results'></jr-dropdown-results>
+        <jr-dropdown-results remove-result="vm.removeEntry" results='vm.results'></jr-dropdown-results>
     </div>
 </div>

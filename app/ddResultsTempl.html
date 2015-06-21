@@ -12,11 +12,10 @@
             <td>{{ result.dextroseConcentration }}</td>
             <td>{{ result.volume }}</td>
             <td>{{ result.caloricIntake }}</td>
-            <td> <jr-remove-result test-this="vm.test()" index="{{ $index}}"></jr-remove-result> </td>
+            <td> <jr-remove-result remove="vm.remove" index="{{ $index}}"></jr-remove-result> </td>
 
         </tr>
 
     </table>
-    <button ng-click="vm.test()">test</button>
     {{ vm.selectedDextrose }}
 </div>

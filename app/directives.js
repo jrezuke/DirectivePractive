@@ -10,8 +10,7 @@
             link: link,
             scope: {
                 dextroses: '=',
-                results: '=',
-                testMethod: '&'
+                results: '='
             },
             templateUrl: 'app/ddTemplate.html',
             controller: function ($scope) {
@@ -23,13 +22,11 @@
 
                 var vm = this;
 
-                vm.test = function(){
-                    vm.testMethod();
-                };
                 vm.selectedDextrose = {};  //vm.dextroses[0];
 
 
                 vm.removeEntry = function (indx) {
+                    //alert("removeEntry" + indx);
                     vm.results.splice(indx, 1);
                 };
 
@@ -80,8 +77,8 @@
             controller:function($scope){
                 var vm = this;
 
-                vm.test = function(){
-                    vm.removeResult();
+                vm.remove = function(index){
+                    vm.removeResult()(index);
                 };
             },
             controllerAs: 'vm',
@@ -101,7 +98,7 @@
             templateUrl: 'app/removeResult.html',
             scope: {
                 index: '@',
-                testThis: '&'
+                remove: '&'
             },
             controller: function($scope) {
                 $scope.removing = false;
@@ -112,8 +109,9 @@
                     $scope.removing = false;
                 }
                 $scope.confirmRemove = function() {
-                    alert('confirmed' + $scope.index);
-                    $scope.testThis();
+                    $scope.removing = false;
+                    //alert('confirmed' + $scope.index);
+                    $scope.remove()($scope.index);
                 };
             }
         };
