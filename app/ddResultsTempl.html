@@ -3,15 +3,15 @@
 
     <table class="table1 table-responsive">
         <tr>
-            <th style="width:100px">Dextrose %</th>
-            <th style="width:100px">Volume</th>
-            <th style="width:100px">Caloric Intake</th>
+            <th style="width:100px;">Dextrose %</th>
+            <th style="width:100px;">Volume</th>
+            <th style="width:100px;">Caloric Intake</th>
             <th></th>
         </tr>
-        <tr ng-repeat="result in vm.results track by $index">
-            <td style="width:100px">{{ result.dextroseConcentration }}</td>
-            <td style="width:100px">{{ result.volume }}</td>
-            <td style="width:100px">{{ result.caloricIntake }}</td>
+        <tr style="height: 27px" ng-repeat="result in vm.results track by $index">
+            <td style="width:100px; height:50px">{{ result.dextroseConcentration }}</td>
+            <td style="width:100px;">{{ result.volume }}</td>
+            <td style="width:100px;">{{ result.caloricIntake }}</td>
             <td> <jr-remove-result remove="vm.remove" index="{{ $index}}"></jr-remove-result> </td>
 
         </tr>

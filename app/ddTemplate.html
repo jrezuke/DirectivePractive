@@ -1,7 +1,8 @@
 <div>
     <h3>Fluid Infusions</h3>
+
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
             <form name="dexForm" class="form-inline" novalidate role="form">
 
                 <div class="form-group"
@@ -10,21 +11,19 @@
 
                     <lable for="dextoseConcentration">Dextrose %</lable>
 
-                    <select style="width: 100px" option-value-required="true" ng-model="vm.selectedDextrose"
+                    <select style="width: 150px" option-value-required="true" ng-model="vm.selectedDextrose"
                             ng-options="item as item.display for item in vm.dextroses"
                             class="form-control" id="dextoseConcentration" name="dextoseConcentration">
                         <!--<option ng-repeat="item in dextroses" value="item">{{ item.display }}</option>-->
                         <option></option>
                     </select>
-
-                <span class="help-block"
-                      ng-show="dexForm.dextoseConcentration.$touched || dexForm.$submitted"
-                      ng-messages="dexForm.dextoseConcentration.$error">
-                    <span ng-message="optionValueRequired">
-                        Dextrose concentration is required!
+                    <span class="help-block"
+                          ng-show="dexForm.dextoseConcentration.$touched || dexForm.$submitted"
+                          ng-messages="dexForm.dextoseConcentration.$error">
+                                        <span ng-message="optionValueRequired">
+                                            Dextrose concentration is required!
+                                        </span>
                     </span>
-                </span>
-
                 </div>
                 &nbsp;&nbsp;
                 <div class="form-group"
@@ -56,7 +55,7 @@
             </form>
         </div>
         <div class="col-md-3 helpText">
-            Select the destrose concentration, enter the volume, then click add.  Do this for each fluid infusion entry.
+            Select the destrose concentration, enter the volume, then click add. Do this for each fluid infusion entry.
         </div>
     </div>
     <div class="row">
